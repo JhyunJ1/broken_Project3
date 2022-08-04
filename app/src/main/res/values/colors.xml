@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
+
+
+    <color name="_bg__booting_screen_ek2_color">#000000</color>
+	<color name="_bg__complete_page_ek2_color">#000000</color>
+	<color name="rectangle_29_color">#181818</color>
+	<color name="rectangle_29_ek1_color">#FFFFFF</color>
+	<color name="rectangle_18_color">#F87B82</color>
+	<color name="___________color">#000000</color>
+	<color name="_bg__location_ek2_color">#000000</color>
+	<color name="rectangle_13_color">#FFFFFF</color>
+	<color name="_bg__log_in_ek2_color">#000000</color>
+	<color name="rectangle_42_color">#FBFBFB</color>
+	<color name="log_in_ek3_color">#120909</color>
+	<color name="rectangle_3_color">#FFFFFF</color>
+	<color name="rectangle_5_color">#FD989B</color>
+	<color name="enter_color">#020202</color>
+	<color name="_bg__matching_1_ek2_color">#000000</color>
+	<color name="background_color">#FFFFFF</color>
+	<color name="rectangle_34_color">#FFF2F2</color>
+	<color name="rectangle_34_ek1_color">#FFC7C7</color>
+	<color name="ellipse_9_color">#FC0000</color>
+	<color name="_bg__matching_fail_ek2_color">#000000</color>
+	<color name="rectangle_28_color">#181818</color>
+	<color name="unmatch_color">#FF797E</color>
+	<color name="_bg__matching_page_ek2_color">#000000</color>
+	<color name="rectangle_41_color">#FBFBFB</color>
+	<color name="sign_up_color">#120909</color>
+	<color name="rectangle_32_color">#181818</color>
+	<color name="congratulations__color">#FE888D</color>
+	<color name="_bg__setting_ek2_color">#000000</color>
+	<color name="setting_ek3_color">#FFFFFF</color>
+	<color name="rectangle_35_color">#FFF2F2</color>
+	<color name="logout_color">#000000</color>
+	<color name="_bg__setting2_ek2_color">#000000</color>
+	<color name="notification_color">#FFFFFF</color>
+	<color name="off_color">#3A3335</color>
+	<color name="_bg__sign_up_ek2_color">#000000</color>
+	<color name="sign_up_ek3_color">#120909</color>
+	<color name="_bg__sign_up_check_ek2_color">#000000</color>
+	<color name="rectangle_18_ek1_color">#ffffff</color>
+</resources>

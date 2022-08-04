@@ -1,0 +1,135 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="wrap_content" >
+	<!-- 
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc 		
+	 *	@file 		matching_fail
+	 *	@date 		Saturday 23rd of July 2022 02:21:54 PM
+	 *	@title 		Page 1
+	 *	@author 	
+	 *	@keywords 	
+	 *	@generator 	Export Kit v1.3.figma
+	 *
+	 */
+	-->
+	<ScrollView android:id="@+id/matching_fail" 
+		android:layout_width="wrap_content" 
+		android:layout_height="match_parent" >
+
+		<RelativeLayout android:id="@+id/content_container" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" >
+
+
+
+			<RelativeLayout android:id="@+id/page_matching_fail_ek1"
+				android:layout_marginTop="0dp"
+				android:layout_marginStart="0dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<View   android:id="@+id/_bg__matching_fail_ek2"
+					android:background="@drawable/_bg__matching_fail_ek2_shape"
+					 android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_width="360dp"
+					android:layout_height="640dp" />
+
+				<View
+					android:id="@+id/rectangle_28"
+					android:layout_width="360dp"
+					android:layout_height="640dp"
+					android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:alpha="0.28000000119209"
+					android:background="@drawable/rectangle_28_shape" />
+
+				<View
+					android:id="@+id/rectangle_29"
+					android:layout_width="330dp"
+					android:layout_height="361dp"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="135dp"
+					android:background="@drawable/rectangle_29_1_shape" />
+
+
+				<RelativeLayout android:id="@+id/_24___notifications___alert_circle"
+					android:layout_marginTop="172dp"
+					android:layout_marginStart="140dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					>
+
+					<ImageView
+						android:id="@+id/icon"
+						android:layout_width="73.33dp"
+						android:layout_height="72.42dp"
+						android:layout_marginStart="3.33dp"
+						android:layout_marginTop="3.29dp"
+						android:contentDescription="icon"
+						android:src="@drawable/icon2"
+						/>
+
+				</RelativeLayout>
+
+				<TextView android:id="@+id/block_user"
+					android:textStyle="bold"
+					android:layout_gravity="center_horizontal|center"
+					android:gravity="center"
+					android:textSize="30sp"
+					android:textColor="@color/_bg__matching_fail_ek2_color"
+					android:layout_marginLeft="52dp"
+					android:layout_marginTop="336dp"
+					android:layout_width="266dp"
+					android:layout_height="58dp"
+					android:text="@string/block_user_string"
+					 />
+
+				<TextView android:id="@+id/abusive"
+					android:textStyle="bold"
+					android:layout_gravity="center_horizontal|center"
+					android:gravity="center"
+					android:textSize="30sp"
+					android:textColor="@color/_bg__matching_fail_ek2_color"
+					android:layout_marginLeft="52dp"
+					android:layout_marginTop="378dp"
+					android:layout_width="266dp"
+					android:layout_height="58dp"
+					android:text="@string/abusive_string"
+					 />
+
+				<TextView android:id="@+id/spamming"
+					android:textStyle="bold"
+					android:layout_gravity="center_horizontal|center"
+					android:gravity="center"
+					android:textSize="30sp"
+					android:textColor="@color/_bg__matching_fail_ek2_color"
+					android:layout_marginLeft="52dp"
+					android:layout_marginTop="421dp"
+					android:layout_width="266dp"
+					android:layout_height="59dp"
+					android:text="@string/spamming_string"
+					 />
+
+				<TextView
+					android:id="@+id/unmatch"
+					android:layout_width="318dp"
+					android:layout_height="59.5dp"
+					android:layout_gravity="center_horizontal|center"
+					android:layout_marginLeft="30dp"
+					android:layout_marginTop="259dp"
+					android:gravity="center"
+					android:text="@string/unmatch_string"
+					android:textColor="@color/unmatch_color"
+					android:textSize="45sp"
+					android:textStyle="bold"/>
+
+			</RelativeLayout>
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>
