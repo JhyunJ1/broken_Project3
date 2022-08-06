@@ -67,7 +67,7 @@
 					>
 
 					<ImageView
-						android:id="@+id/rectangle_17"
+						android:id="@+id/yesBtn"
 						android:layout_width="100dp"
 						android:layout_height="40dp"
 						android:layout_marginStart="0dp"
@@ -97,13 +97,14 @@
 					android:layout_height="wrap_content"
 					>
 
-					<ImageView android:id="@+id/rectangle_17_1"
-						android:src="@drawable/rectangle_17"
-						android:contentDescription="rectangle_17"
+					<ImageView
+						android:id="@+id/noBtn"
+						android:layout_width="100dp"
+						android:layout_height="40dp"
 						android:layout_marginStart="0dp"
 						android:layout_marginTop="40dp"
-						android:layout_width="100dp"
-						android:layout_height="40dp" />
+						android:contentDescription="rectangle_17"
+						android:src="@drawable/rectangle_17" />
 
 					<TextView
 						android:id="@+id/no"
