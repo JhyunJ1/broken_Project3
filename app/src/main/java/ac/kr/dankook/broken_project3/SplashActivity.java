@@ -2,17 +2,25 @@ package ac.kr.dankook.broken_project3;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Build;
 import android.os.Bundle;
 
 
 import android.os.Handler;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import ac.kr.dankook.broken_project3.log_in_activity;
 
@@ -27,6 +35,8 @@ import ac.kr.dankook.broken_project3.log_in_activity;
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
+
+
 
 		moveMain(2);
 
@@ -54,6 +64,8 @@ import ac.kr.dankook.broken_project3.log_in_activity;
 			}
 		}, 1000 * sec);
 	}
+
+
 
 
 	@Override
