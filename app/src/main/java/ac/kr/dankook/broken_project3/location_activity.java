@@ -26,11 +26,21 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-	public class location_activity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+	public class location_activity extends AppCompatActivity implements OnMapReadyCallback {
 
 
 	private View decorView;
 	private int uiOption;
+	private GoogleMap mMap;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -47,8 +57,13 @@ import android.widget.TextView;
 		if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT )
 			uiOption |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 
+		SupportMapFragment mapFragment = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+		mapFragment.getMapAsync(this);
+
 
 	}
+
+
 
 	@Override
 	public void onWindowFocusChanged(boolean hasFocus) {
@@ -58,6 +73,23 @@ import android.widget.TextView;
 		if( hasFocus ) {
 			decorView.setSystemUiVisibility( uiOption );
 		}
+	}
+
+	@Override
+	public void onMapReady(final GoogleMap googleMap) {
+		mMap = googleMap;
+		LatLng SEOUL = new LatLng(37.56, 126.97);
+
+		MarkerOptions markerOptions = new MarkerOptions();         // 마커 생성
+		markerOptions.position(SEOUL);
+		markerOptions.title("서울");                         // 마커 제목
+		markerOptions.snippet("한국의 수도");         // 마커 설명
+		mMap.addMarker(markerOptions);
+
+		mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));                 // 초기 위치
+		mMap.animateCamera(CameraUpdateFactory.zoomTo(15));                         // 줌의 정도
+		googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);                           // 지도 유형 설정
+
 	}
 }
 	

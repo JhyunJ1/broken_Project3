@@ -58,7 +58,7 @@ public class matching_page_activity extends Activity {
 		yes.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(getApplicationContext(), kakaomap_activity.class);
+				Intent intent = new Intent(getApplicationContext(), location_activity.class);
 				startActivity(intent);
 			}
 		});
