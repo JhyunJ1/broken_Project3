@@ -1,20 +1,5 @@
 
 
-	/*
-	 *	This content is generated from the API File Info.
-	 *	(Alt+Shift+Ctrl+I).
-	 *
-	 *	@desc
-	 *	@file 		sign_up
-	 *	@date 		Saturday 23rd of July 2022 02:13:52 PM
-	 *	@title 		Page 1
-	 *	@author
-	 *	@keywords
-	 *	@generator 	Export Kit v1.3.figma
-	 *
-	 */
-
-
 	package ac.kr.dankook.broken_project3;
 
 	import android.app.Activity;
@@ -23,15 +8,20 @@
 	import android.os.Bundle;
 
 
+	import android.util.Log;
 	import android.view.View;
 	import android.widget.Button;
 	import android.widget.EditText;
 
+	import com.android.volley.Header;
 	import com.android.volley.RequestQueue;
 	import com.android.volley.Response;
 	import com.android.volley.toolbox.StringRequest;
 	import com.android.volley.toolbox.Volley;
 	import com.google.gson.JsonParseException;
+	import com.loopj.android.http.AsyncHttpClient;
+	import com.loopj.android.http.AsyncHttpResponseHandler;
+
 
 
 	import org.json.JSONArray;
@@ -41,31 +31,9 @@
 	import java.util.HashMap;
 	import java.util.Map;
 
-	class RegisterRequest extends StringRequest {
+	import cz.msebera.android.httpclient.HttpEntity;
+	import cz.msebera.android.httpclient.entity.StringEntity;
 
-		final static private String URL = "https://webhook.site/8d505641-5ac2-41c6-82c5-53538c591433";
-		private Map<String, String> map;
-
-		public RegisterRequest(String user_email, String user_name, String user_pw, Response.Listener<String> listener) {
-			super(Method.POST, URL, listener, null);
-
-			map = new HashMap<>();
-			map.put("user_email", user_email);
-			map.put("user_name", user_name);
-			map.put("user_pw", user_pw);
-
-
-		}
-
-		@Override
-		protected Map<String, String> getParams() {
-			return map;
-		}
-
-
-
-
-	}
 
 	public class sign_up_activity extends Activity {
 
@@ -103,29 +71,67 @@
 			continue1.setOnClickListener(myClickListener);
 		}
 
-
+		JSONObject user = new JSONObject();
 
 		View.OnClickListener myClickListener = new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String user_email = email.getText().toString();
-				String user_name = name.getText().toString();
-				String user_pw = password.getText().toString();
+				// json 파일 만들기
+				try {
+					user.put("user_name", name.getText());
+					user.put("user_age", age.getText());
+					user.put("user_pw", password.getText());
 
-				Response.Listener<String> responseListener = new Response.Listener<String>() {
-					@Override
-					public void onResponse(String response) {
-						Intent intent = new Intent(sign_up_activity.this, sign_up_check_activity.class);
-						startActivity(intent);
-					}
-				};
+				} catch(JSONException e) {
 
-				RegisterRequest registerRequest = new RegisterRequest(user_email, user_name, user_pw,responseListener);
-				RequestQueue queue = Volley.newRequestQueue(sign_up_activity.this);
-				queue.add(registerRequest);
-
+				}
+				getRequestHttpPOST_BODY_JSON("https://webhook.site/386cad30-6870-48b0-a194-cbbc8a93d2b0");
 			}
 		};
+
+
+		public void getRequestHttpPOST_BODY_JSON(String url) {
+			try {
+				AsyncHttpClient client = new AsyncHttpClient();
+				JSONObject params = new JSONObject();
+
+				params.put("users", user);
+
+				StringEntity entity = new StringEntity(String.valueOf(params.toString()));
+
+				client.post(sign_up_activity.this, url, entity, "application/json", new AsyncHttpResponseHandler() {
+					@Override
+					public void onStart() {
+
+					}
+					@Override
+					public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, byte[] responseBody) {
+						String responseData = String.valueOf(new String(responseBody));
+						Log.d("---","---");
+						Log.w("//===========//","================================================");
+						Log.d("","\n"+"[A_Http > getRequestHttpPOST_BODY_JSON() 메소드 : HTTP 통신 수행 POST BODY JSON 방식 요청 확인]");
+						Log.d("","\n"+"["+"응답 전체 - "+String.valueOf(responseData)+"]");
+						Log.w("//===========//","================================================");
+						Log.d("---","---");
+					}
+
+					@Override
+					public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, byte[] responseBody, Throwable error) {
+						String responseError = String.valueOf(new String(responseBody));
+						Log.d("---","---");
+						Log.e("//===========//","================================================");
+						Log.d("","\n"+"[A_Http > getRequestHttpPOST_BODY_JSON() 메소드 : HTTP 통신 수행 POST BODY JSON 방식 요청 실패]");
+						Log.d("","\n"+"["+"에러코드 - "+String.valueOf(statusCode + "/" + responseError +"]"));
+						Log.e("//===========//","================================================");
+						Log.d("---","---");
+					}
+
+				});
+			}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		}
 
 
 		@Override

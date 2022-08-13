@@ -1,20 +1,6 @@
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent" android:layout_height="wrap_content" >
-	<!-- 
-	/*
-	 *	This content is generated from the API File Info.
-	 *	(Alt+Shift+Ctrl+I).
-	 *
-	 *	@desc 		
-	 *	@file 		log_in
-	 *	@date 		Saturday 23rd of July 2022 02:12:15 PM
-	 *	@title 		Page 1
-	 *	@author 	
-	 *	@keywords 	
-	 *	@generator 	Export Kit v1.3.figma
-	 *
-	 */
-	-->
+
 	<ScrollView android:id="@+id/log_in" 
 		android:layout_width="wrap_content" 
 		android:layout_height="match_parent" >
@@ -82,7 +68,9 @@
 					android:alpha="0.60000002384186"
 					android:background="@drawable/rectangle_3_shape"
 					android:gravity="center"
-					android:textAlignment="center" />
+					android:hint="아이디를 입력하세요"
+					android:textAlignment="center"
+					android:textSize="12dp"/>
 
 				<TextView
 					android:id="@+id/password"
@@ -130,8 +118,9 @@
 					android:alpha="0.60000002384186"
 					android:background="@drawable/rectangle_4_shape"
 					android:gravity="center"
+					android:hint="비밀번호를 입력하세요"
 					android:textAlignment="center"
-					/>
+					android:textSize="12dp" />
 
 				<Button
 					android:id="@+id/rectangle_5"

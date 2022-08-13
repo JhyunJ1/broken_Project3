@@ -1,20 +1,6 @@
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent" android:layout_height="wrap_content" >
-	<!-- 
-	/*
-	 *	This content is generated from the API File Info.
-	 *	(Alt+Shift+Ctrl+I).
-	 *
-	 *	@desc 		
-	 *	@file 		sign_up
-	 *	@date 		Saturday 23rd of July 2022 02:13:52 PM
-	 *	@title 		Page 1
-	 *	@author 	
-	 *	@keywords 	
-	 *	@generator 	Export Kit v1.3.figma
-	 *
-	 */
-	-->
+
 	<ScrollView android:id="@+id/sign_up" 
 		android:layout_width="wrap_content" 
 		android:layout_height="match_parent" >
@@ -220,8 +206,7 @@
 					android:layout_marginTop="567dp"
 					android:background="@drawable/rectangle_18_shape"
 					android:text="continue"
-					android:textStyle="bold"
-					 />
+					android:textStyle="bold" />
 
 				<EditText
 					android:id="@+id/name"

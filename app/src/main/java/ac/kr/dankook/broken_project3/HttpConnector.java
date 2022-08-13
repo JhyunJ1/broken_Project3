@@ -10,7 +10,7 @@ public class HttpConnector extends Thread{
     @Override
     public void run() {
         try {
-            URL url = new URL("https://webhook.site/8d505641-5ac2-41c6-82c5-53538c591433");
+            URL url = new URL("https://webhook.site/386cad30-6870-48b0-a194-cbbc8a93d2b0");
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 
             if(conn != null) {

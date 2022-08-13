@@ -24,6 +24,7 @@ import android.os.Bundle;
 
 
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,6 +43,8 @@ public class matching_page_activity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.matching_page);
+
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		yes = findViewById(R.id.yesBtn);
 		no = findViewById(R.id.noBtn);

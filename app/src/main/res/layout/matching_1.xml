@@ -5,11 +5,6 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	tools:ignore="MissingClass">
 
-
-
-
-
-
 	<ScrollView android:id="@+id/matching_1" 
 		android:layout_width="wrap_content" 
 		android:layout_height="match_parent" >
@@ -19,15 +14,12 @@
 			android:layout_height="wrap_content" >
 
 
-
-
 			<RelativeLayout android:id="@+id/page_matching_1_ek1"
 				android:layout_marginTop="0dp"
 				android:layout_marginStart="0dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				>
-
 
 				<com.airbnb.lottie.LottieAnimationView
 					android:id="@+id/lottie"

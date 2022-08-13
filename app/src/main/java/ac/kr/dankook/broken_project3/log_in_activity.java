@@ -24,6 +24,7 @@ import android.os.Bundle;
 
 
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -42,6 +43,7 @@ public class log_in_activity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.log_in);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		decorView = getWindow().getDecorView();
 		uiOption = getWindow().getDecorView().getSystemUiVisibility();
